@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from './Button';
 import { TEInput } from 'tw-elements-react';
-function Input({ city, setCity, country, setCountry, getWeather }) {
+function Input({ location, setLocation, getWeather }) {
   return (
     <div className="w-full">
       <form>
@@ -9,17 +9,17 @@ function Input({ city, setCity, country, setCountry, getWeather }) {
           <TEInput
             className="text-white"
             type="text"
-            label="Country"
-            value={country}
-            onChange={(e) => setCountry(e.target.value)}
+            label="Country / City"
+            value={location}
+            onChange={(e) => setLocation(e.target.value)}
           ></TEInput>
-          <TEInput
+          {/* <TEInput
             className="text-white"
             type="text"
             label="City"
             value={city}
             onChange={(e) => setCity(e.target.value)}
-          ></TEInput>
+          ></TEInput> */}
           <Button getWeather={getWeather} />
         </div>
       </form>
